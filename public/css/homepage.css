@@ -64,6 +64,7 @@ textarea {
   padding: 5px;
   margin: 10px;
   border: 2px solid #000000;
+  outline: none;
 }
 
 p {
