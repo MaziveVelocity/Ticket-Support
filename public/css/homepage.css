@@ -23,7 +23,7 @@ body {
 }
 
 .ticket-list {
-  background-image: linear-gradient(180deg, WhiteSmoke, SlateGrey);
+  background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(60, 60, 60));
 }
 
 .ticket-info {
@@ -33,8 +33,8 @@ body {
   width: 50%;
   border: 3px solid #000000;
   border-radius: 15px;
-  background-image: linear-gradient(180deg, SlateGrey, WhiteSmoke);
-  color: #000000;
+  background-color: #2a607c;
+  color: white;
   }
 
 
