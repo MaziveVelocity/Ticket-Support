@@ -14,7 +14,7 @@ async function logInFormHandler() {
     });
     console.log(username, password);
     console.log(response, 'login submitted');
-    window.location.reload();
+    // window.location.reload();
   }
 }
 
@@ -40,7 +40,7 @@ async function registerFormHandler() {
       headers: { 'Content-Type': 'application/json' }
     });
     console.log(response);
-    window.location.reload();
+    // window.location.reload();
   }
 }
 

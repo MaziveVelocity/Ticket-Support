@@ -1,5 +1,4 @@
 async function SubmitFormHandler() {
-  console.log('click')
 
   const title = $('#title').val();
   const content = $('#description').val().trim();
