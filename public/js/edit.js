@@ -1,10 +1,12 @@
-async function SubmitFormHandler(event) {
+async function SubmitFormHandler() {
+  console.log('click')
+
   const title = $('#title').val();
   const content = $('#description').val().trim();
   const category = $('#options').val();
 
 
-  if (!title && !user && !content && !category) {
+  if (!title && !content && !category) {
     return console.log('Error cannot leave empty fields!');
   } else {
     const id = $('#form').data('id');
@@ -23,4 +25,4 @@ async function SubmitFormHandler(event) {
   }
 }
 
-$('#form').on('click', SubmitFormHandler);
+$('#submit').on('click', SubmitFormHandler);
