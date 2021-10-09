@@ -17,6 +17,7 @@ async function SubmitFormHandler() {
     {
       category = categoryEl.attr('placeholder');
     }
+
     const id = $('#form').data('id');
 
     const response = await fetch(`/api/ticket/${id}`, {
@@ -31,6 +32,5 @@ async function SubmitFormHandler() {
     console.log(response, 'ticket submitted');
     window.location.href = '/homepage';
   }
-}
 
 $('#submit').on('click', SubmitFormHandler);
