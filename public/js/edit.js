@@ -3,6 +3,9 @@ async function SubmitFormHandler() {
   const title = $('#title').val();
   const content = $('#description').val().trim();
   const category = $('#options').val();
+  const titleEl = $('#title');
+  const contentEl = $('#description');
+  const categoryEl = $('#options');
 
 
   if(title == "")
