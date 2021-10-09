@@ -5,9 +5,18 @@ async function SubmitFormHandler() {
   const category = $('#options').val();
 
 
-  if (!title && !content && !category) {
-    return console.log('Error cannot leave empty fields!');
-  } else {
+  if(title == "")
+    {
+      title = titleEl.attr('placeholder');
+    }
+    if(content == "")
+    {
+      content = contentEl.attr('placeholder');
+    }
+    if(category == "")
+    {
+      category = categoryEl.attr('placeholder');
+    }
     const id = $('#form').data('id');
 
     const response = await fetch(`/api/ticket/${id}`, {

@@ -1,4 +1,5 @@
-async function logInFormHandler() {
+async function logInFormHandler(event) {
+  event.preventDefault();
 
   const username = $('#username-login').val().trim();
   const password = $('#password-login').val().trim();
@@ -14,15 +15,15 @@ async function logInFormHandler() {
     });
     console.log(username, password);
     console.log(response, 'login submitted');
-    // window.location.reload();
+    window.location.reload();
   }
 }
 
 $('#login-form').on('submit', logInFormHandler);
 
 
-async function registerFormHandler() {
-
+async function registerFormHandler(event) {
+  event.preventDefault();
   console.log('submit signup');
 
   const username = $('#username-register').val().trim();
@@ -40,9 +41,11 @@ async function registerFormHandler() {
       headers: { 'Content-Type': 'application/json' }
     });
     console.log(response);
-    // window.location.reload();
+    window.location.reload();
   }
 }
+
+$('#signup-form').on('submit', registerFormHandler);
 
 /*code to add possible live checks for username and password*/
 // async function newAccountCheckHandler() {
