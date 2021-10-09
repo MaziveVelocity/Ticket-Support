@@ -1,14 +1,12 @@
 async function SubmitFormHandler() {
-
-  const title = $('#title').val();
-  const content = $('#description').val().trim();
-  const category = $('#options').val();
   const titleEl = $('#title');
   const contentEl = $('#description');
   const categoryEl = $('#options');
+  let title = titleEl.val();
+  let content = contentEl.val();
+  let category =  categoryEl.val();
 
-
-  if(title == "")
+    if(title == "")
     {
       title = titleEl.attr('placeholder');
     }
@@ -20,7 +18,6 @@ async function SubmitFormHandler() {
     {
       category = categoryEl.attr('placeholder');
     }
-
     const id = $('#form').data('id');
 
     const response = await fetch(`/api/ticket/${id}`, {
@@ -34,6 +31,6 @@ async function SubmitFormHandler() {
     });
     console.log(response, 'ticket submitted');
     window.location.href = '/homepage';
-  }
+}
 
 $('#submit').on('click', SubmitFormHandler);
